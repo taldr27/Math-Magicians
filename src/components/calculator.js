@@ -1,40 +1,55 @@
 import React from 'react';
+import calculate from '../logic/calculate';
 import './calculator.css';
 
 class Calculator extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      total: 0,
+      next: null,
+      operation: null,
+    };
+    this.onClickHandler = (e) => {
+      const data = e.target.innerHTML;
+      const result = calculate(this.state, data);
+      this.setState(result);
+    };
   }
 
   render() {
+    const { total, next, operation } = this.state;
     return (
       <div className="calculator-container">
         <div className="input-field">
-          <p>0</p>
+          <p>
+            {total}
+            {operation}
+            {next}
+          </p>
         </div>
         <div className="calculator-box">
-          <p>AC</p>
-          <p>+/-</p>
-          <p>%</p>
-          <p className="orange-box">/</p>
-          <p>7</p>
-          <p>8</p>
-          <p>9</p>
-          <p className="orange-box">X</p>
-          <p>4</p>
-          <p>5</p>
-          <p>6</p>
-          <p className="orange-box">-</p>
-          <p>1</p>
-          <p>2</p>
-          <p>3</p>
-          <p className="orange-box">+</p>
+          <button onClick={this.onClickHandler} type="button">AC</button>
+          <button onClick={this.onClickHandler} type="button">+/-</button>
+          <button onClick={this.onClickHandler} type="button">%</button>
+          <button onClick={this.onClickHandler} type="button" className="orange-box">÷</button>
+          <button onClick={this.onClickHandler} type="button">7</button>
+          <button onClick={this.onClickHandler} type="button">8</button>
+          <button onClick={this.onClickHandler} type="button">9</button>
+          <button onClick={this.onClickHandler} type="button" className="orange-box">x</button>
+          <button onClick={this.onClickHandler} type="button">4</button>
+          <button onClick={this.onClickHandler} type="button">5</button>
+          <button onClick={this.onClickHandler} type="button">6</button>
+          <button onClick={this.onClickHandler} type="button" className="orange-box">-</button>
+          <button onClick={this.onClickHandler} type="button">1</button>
+          <button onClick={this.onClickHandler} type="button">2</button>
+          <button onClick={this.onClickHandler} type="button">3</button>
+          <button onClick={this.onClickHandler} type="button" className="orange-box">+</button>
         </div>
         <div className="buttons">
-          <p className="p-0">0</p>
-          <p>.</p>
-          <p className="orange-box">=</p>
+          <button onClick={this.onClickHandler} type="button" className="p-0">0</button>
+          <button onClick={this.onClickHandler} type="button">.</button>
+          <button onClick={this.onClickHandler} type="button" className="orange-box">=</button>
         </div>
       </div>
     );

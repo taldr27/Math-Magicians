@@ -43,3 +43,7 @@
 .orange-box {
   background-color: hsl(27, 90%, 60%);
 }
+
+button {
+  border: none;
+}
