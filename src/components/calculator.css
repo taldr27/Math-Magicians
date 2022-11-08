@@ -37,11 +37,10 @@ p {
   justify-content: center;
   gap: 1em;
   margin: 0.5em;
-  margin-top: 1.5em;
 }
 
 a {
-  color: blue;
+  color: hsl(208, 89%, 31%);
   font-size: 20px;
 }
 
@@ -115,32 +114,52 @@ button {
   border: none;
 }
 
-/* @media only screen and (min-width: 678px) {
+@media only screen and (min-width: 678px) {
   .header {
     display: flex;
     flex-direction: row;
-    margin-inline: 2em;
     align-items: center;
-    border: none;
-    font-size: 24px;
-    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-between;
+    margin: 2em;
+    margin-top: 1.5em;
+    gap: 0.5em;
+    border-bottom: none;
+    font-size: 26px;
+  }
+
+  .home-container {
+    font-size: 30px;
+    padding: 3em;
   }
 
   .main-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 2em;
-    font-size: 20px;
+    margin-left: 2em;
+    gap: 1em;
+    padding: 1em;
+  }
+
+  .main-container h3 {
+    font-size: 35px;
   }
 
   .calculator-container {
-    min-width: 32em;
-    
+    max-width: 32em;
+    margin: 2em;
     border: 3px solid black;
     align-self: flex-end;
   }
+
   button {
-    font-size: 23px;
+    font-size: 25px;
   }
-} */
+
+  p {
+    margin-top: 1em;
+    font-size: 17px;
+  }
+
+}

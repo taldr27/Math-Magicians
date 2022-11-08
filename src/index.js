@@ -14,11 +14,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <>
-      <div className="header">
-        <h1>Math Magicians</h1>
-      </div>
       <BrowserRouter>
-        <Navbar />
+        <div className="header">
+          <h1>Math Magicians</h1>
+          <Navbar />
+        </div>
         <Routes>
           <Route path="/calculator" element={<Calculator />} />
           <Route path="/" element={<Home />} />

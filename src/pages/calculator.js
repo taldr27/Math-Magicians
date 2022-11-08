@@ -18,14 +18,14 @@ const Calculator = () => {
   return (
     <div className="big-container">
       <div className="main-container">
-        <h3>Lets do some math</h3>
+        <h3>Let&apos;s do some math!</h3>
         <div className="calculator-container">
           <div className="input-field">
-            <p>
+            <h2>
               {total}
               {operation}
               {next}
-            </p>
+            </h2>
           </div>
           <div className="calculator-box">
             <button onClick={onClickHandler} type="button">AC</button>
