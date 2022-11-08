@@ -16,15 +16,15 @@ root.render(
     <>
       <div className="header">
         <h1>Math Magicians</h1>
-        <BrowserRouter>
-          <Navbar />
-          <Routes>
-            <Route path="/calculator" element={<Calculator />} />
-            <Route path="/" element={<Home />} />
-            <Route path="/quote" element={<Quote />} />
-          </Routes>
-        </BrowserRouter>
       </div>
+      <BrowserRouter>
+        <Navbar />
+        <Routes>
+          <Route path="/calculator" element={<Calculator />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/quote" element={<Quote />} />
+        </Routes>
+      </BrowserRouter>
     </>
   </React.StrictMode>,
 );

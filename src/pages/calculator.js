@@ -18,7 +18,7 @@ const Calculator = () => {
   return (
     <div className="big-container">
       <div className="main-container">
-        <h2>Lets do some math</h2>
+        <h3>Lets do some math</h3>
         <div className="calculator-container">
           <div className="input-field">
             <p>

@@ -4,33 +4,60 @@
 }
 
 .big-container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
+  width: 100%;
+  height: 60vh;
+  margin-top: 1em;
+}
+
+.home-container {
   padding: 1em;
-  margin-inline: 5em;
+}
+
+p {
+  margin-top: 1em;
+  font-size: 15px;
 }
 
 .header {
   display: flex;
-  width: 100%;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   justify-content: space-between;
-  margin-block: 2em;
+  margin: 0.5em;
+  margin-top: 1.5em;
   gap: 0.5em;
   border-bottom: 1px solid black;
-  margin-inline: 2em;
   font-size: 24px;
 }
 
-nav {
-  margin-bottom: 1em;
+.navBar {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 0.5em;
+  margin-top: 1.5em;
 }
 
-nav > * {
-  margin-inline: 0.5em;
+a {
+  color: blue;
+  font-size: 20px;
+}
+
+a:hover {
+  color: hsl(27, 90%, 60%);
+}
+
+.quote-container {
+  height: 100%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 1em;
+  font-size: 30px;
+  margin-top: -0.5em;
 }
 
 .input-field {
@@ -41,17 +68,16 @@ nav > * {
 }
 
 .main-container {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1em;
-  font-size: 24px;
+  font-size: 20px;
+  padding: 1em;
 }
 
 .calculator-container {
-  min-width: 13em;
-  max-width: 35em;
+  width: 100%;
   /* background-color: hsl(0, 0%, 88%); */
   border: 3px solid black;
   align-self: center;
@@ -89,7 +115,7 @@ button {
   border: none;
 }
 
-@media only screen and (min-width: 470px) {
+/* @media only screen and (min-width: 678px) {
   .header {
     display: flex;
     flex-direction: row;
@@ -98,10 +124,6 @@ button {
     border: none;
     font-size: 24px;
     flex-wrap: wrap;
-  }
-
-  nav {
-    margin-bottom: 0;
   }
 
   .main-container {
@@ -114,15 +136,11 @@ button {
 
   .calculator-container {
     min-width: 32em;
-    /* background-color: hsl(0, 0%, 88%); */
+    
     border: 3px solid black;
     align-self: flex-end;
-  }
-
-  .main-container > * {
-    
   }
   button {
     font-size: 23px;
   }
-}
+} */

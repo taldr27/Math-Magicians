@@ -20,11 +20,11 @@ const Navbar = () => {
     },
   ];
   return (
-    <nav className="navBar">
-      <ul>
+    <nav>
+      <ul className="navBar">
         {links.map((link) => (
           <li key={link.id}>
-            <Link to={link.path} activeclassname="active-link">
+            <Link to={link.path}>
               {link.text}
             </Link>
           </li>
