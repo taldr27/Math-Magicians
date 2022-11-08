@@ -1,10 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Calculator from './components/calculator';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+import Calculator from './pages/calculator';
+import Home from './pages/Home';
+import Navbar from './components/NavBar';
+import Quote from './pages/Quote';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Calculator />
+    <>
+      <div className="header">
+        <h1>Math Magicians</h1>
+        <BrowserRouter>
+          <Navbar />
+          <Routes>
+            <Route path="/calculator" element={<Calculator />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/quote" element={<Quote />} />
+          </Routes>
+        </BrowserRouter>
+      </div>
+    </>
   </React.StrictMode>,
 );
