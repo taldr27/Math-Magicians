@@ -77,7 +77,6 @@ a:hover {
 
 .calculator-container {
   width: 100%;
-  /* background-color: hsl(0, 0%, 88%); */
   border: 3px solid black;
   align-self: center;
 }
@@ -161,5 +160,4 @@ button {
     margin-top: 1em;
     font-size: 17px;
   }
-
 }
