@@ -24,7 +24,7 @@ To get a local copy up and running follow these simple example steps.
 - npm start
 
 ### Click below to view live demo
-- Coming soon!
+- https://zingy-malabi-151a57.netlify.app
 
 
 ## Authors
