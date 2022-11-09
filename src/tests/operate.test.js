@@ -38,4 +38,10 @@ test('Should return \'can not divide by 0 message\'', () => {
   expect(result).toBe("Can't divide by 0.");
 });
 
+test('Should display an invalid operation message when operation out of the calculator operation is used',
+() => {
+  /* const result = operate(67, 90, '/'); */
+  expect(() => operate(67, 90, '/')).toThrow(`Unknown operation \'/\'`);
+});
+
 
