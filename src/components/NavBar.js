@@ -1,36 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
-const Navbar = () => {
-  const links = [
-    {
-      id: 1,
-      path: '/',
-      text: 'Home',
-    },
-    {
-      id: 2,
-      path: '/calculator',
-      text: 'Calculator',
-    },
-    {
-      id: 3,
-      path: '/quote',
-      text: 'Quote',
-    },
-  ];
+function Header() {
   return (
-    <nav>
-      <ul className="navBar">
-        {links.map((link) => (
-          <li key={link.id}>
-            <Link to={link.path}>
-              {link.text}
-            </Link>
-          </li>
-        ))}
+    <header className="header">
+      <h1 className="logo">Math Magicians</h1>
+      <ul className="nav-bar">
+        <li className="link-item">
+          <NavLink to="/">
+            Home
+          </NavLink>
+        </li>
+        <li className="link-separator " />
+        <li className="link-item">
+          <NavLink to="/calculator">
+            Calculator
+          </NavLink>
+        </li>
+        <li className="link-separator" />
+        <li className="link-item">
+          <NavLink to="/quote">
+            Quote
+          </NavLink>
+        </li>
       </ul>
-    </nav>
+    </header>
   );
-};
-export default Navbar;
+}
+
+export default Header;
