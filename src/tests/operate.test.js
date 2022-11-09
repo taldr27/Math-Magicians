@@ -4,7 +4,6 @@ import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
 import App from '../App';
 import operate from '../logic/operate';
-import Operate from '../logic/operate';
 import Navbar from '../components/NavBar';
 import Calculator from '../pages/calculator';
 
@@ -18,17 +17,6 @@ test('Render Home and check quote text', async () => {
   expect(screen.getByText(/- William Paul Thurston/i)).toBeInTheDocument();
 });
 
-<<<<<<< HEAD
-/* test('Render when there are no items', () => {
-  
-  const tree = renderer.create(<operate { operate()} />).toJSON();
-  expect(tree).toMatchSnapshot();
-}); */
-=======
-// test('Render when there are no items', () => {
-//   const tree = renderer.create(<Operate />).toJSON();
-//   expect(tree).toMatchSnapshot();
-// });
 
 test('Render NavBar', () => {
   const renderNavBar = renderer.create(<BrowserRouter><Navbar /></BrowserRouter>).toJSON();
@@ -39,10 +27,9 @@ test('Render Calculator', () => {
   const renderCalculator = renderer.create(<Calculator />).toJSON();
   expect(renderCalculator).toMatchSnapshot();
 });
->>>>>>> 85f0e2ca11dcf1bc6b4e74a8403ed4df03b2a564
 
 test('Sum 1, 2 result will be 2', () => {
-  const result = Operate(1, 2, 'x');
+  const result = operate(1, 2, 'x');
   expect(result).toBe('2');
 });
 
