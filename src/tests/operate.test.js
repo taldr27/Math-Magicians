@@ -33,4 +33,9 @@ test('Sum 1, 2 result will be 2', () => {
   expect(result).toBe('2');
 });
 
+test('Should return \'can not divide by 0 message\'', () => {
+  const result = operate(2, 0, '÷');
+  expect(result).toBe("Can't divide by 0.");
+});
+
 
