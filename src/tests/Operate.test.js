@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
-import userEvent from '@testing-library/user-event';
 import { BrowserRouter } from 'react-router-dom';
+import userEvent from '@testing-library/user-event';
 import App from '../App';
 import operate from '../logic/operate';
 import Navbar from '../components/NavBar';
@@ -16,7 +16,6 @@ test('Render Home and check quote text', async () => {
   await user.click(screen.getByText(/quote/i));
   expect(screen.getByText(/- William Paul Thurston/i)).toBeInTheDocument();
 });
-
 
 test('Render NavBar', () => {
   const renderNavBar = renderer.create(<BrowserRouter><Navbar /></BrowserRouter>).toJSON();
@@ -39,9 +38,7 @@ test('Should return \'can not divide by 0 message\'', () => {
 });
 
 test('Should display an invalid operation message when operation out of the calculator operation is used',
-() => {
+  () => {
   /* const result = operate(67, 90, '/'); */
-  expect(() => operate(67, 90, '/')).toThrow(`Unknown operation \'/\'`);
-});
-
-
+    expect(() => operate(67, 90, '/')).toThrow('Unknown operation \'/\'');
+  });
