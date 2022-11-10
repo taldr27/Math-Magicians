@@ -21,7 +21,7 @@ const Calculator = () => {
         <h3>Let&apos;s do some math!</h3>
         <div className="calculator-container">
           <div className="input-field">
-            <h2>
+            <h2 data-testid="testH2">
               {total}
               {operation}
               {next}
